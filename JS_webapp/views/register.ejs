@@ -1,0 +1,19 @@
+<%- include('./partials/header.ejs') %>
+
+<h1><a href="/">BOBREPORT</a></h1>
+<form method="POST">
+    <label for="username">Username:</label>
+    <input type="username" name="username" value="<%= username %>"/>
+    <label for="password">Password:</label>
+    <input type="password" name="password" />
+    <label for="verification">Verify password:</label>
+    <input type="password" name="verification" />
+    <input type="submit" value="Submit!" />
+</form>
+<% if (error) { %>
+      <ul>
+            <li><%= error %></li>
+      </ul>
+<% } %>
+
+<%- include('./partials/footer.ejs') %>

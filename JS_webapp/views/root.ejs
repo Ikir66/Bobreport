@@ -1,0 +1,17 @@
+<%- include('./partials/header.ejs') %>
+
+<h1><a href="/">BOBREPORT</a></h1>
+<h5><a href="/auth/login">Login</a></h5>
+<h5><a href="/auth/register">Register</a></h5>
+<h3>Welcome to Bobreport – an app helping you to stimulate your daily routines.</h3>
+
+<ul>
+<li>Average mood of users today: <%= today %> </li>
+<li>Average mood of users yesterday: <%= yesterday %> </li>
+</ul>
+<% if (today > yesterday) { %>
+      <p>Things are looking bright today!</p>
+<% } else { %>
+      <p>Things are looking gloomy today ;(</p>
+<% } %>
+<%- include('./partials/footer.ejs') %>

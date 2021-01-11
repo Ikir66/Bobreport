@@ -1,0 +1,58 @@
+<%- include('./partials/header.ejs') %>
+
+<h1><a href="/">BOBREPORT</a></h1>
+
+<h4>Your averages for last 7 days:</h4>
+<ul>
+  <li>Mood: <%=moodWeek%> </li>
+  <li>Sleep duration: <%=sleepDWeek%> </li>
+  <li>Sleep quality: <%=sleepQWeek%> </li>
+  <li>Time studied: <%= studiesWeek%> </li>
+  <li>Time spent on sports: <%=sportsWeek%> </li>
+  <li>Nutrition: <%=eatingWeek%> </li>
+</ul>
+
+<h4>Your averages for last 30 days:</h4>
+<ul>
+  <li>Mood: <%=moodMonth%> </li>
+  <li>Sleep duration: <%=sleepDMonth%> </li>
+  <li>Sleep quality: <%=sleepQMonth%> </li>
+  <li>Time studied: <%= studiesMonth%> </li>
+  <li>Time spent on sports: <%=sportsMonth%> </li>
+  <li>Nutrition: <%=eatingMonth%> </li>
+</ul>
+
+<h4>For specific time period:</h4>
+
+<ul>
+<form method="POST">
+  <label for="startdate">From:</label>
+  <input type="date" name="startdate"/>
+  <label for="enddate">To:</label>
+  <input type="date" name="enddate"/>
+  <input type="submit" value="Submit!" />
+</form>
+</ul>
+
+<% if (sleepD) { %>
+  <p><%=start%> : <%=end%></p>
+      <ul>
+        <li>Mood: <%=mood%> </li>
+        <li>Sleep duration: <%=sleepD%> </li>
+        <li>Sleep quality: <%=sleepQ%> </li>
+        <li>Time studied: <%= studies%> </li>
+        <li>Time spent on sports: <%=sports%> </li>
+        <li>Nutrition: <%=eat%> </li>
+      </ul>
+<% } else { %>
+  <ul>
+      <li>No data for given period</li>
+  </ul>
+<% } %>
+
+
+
+<p><a href="/report">Report</a></>
+<p><a href="/out">Log out</a></>
+
+<%- include('./partials/footer.ejs') %>

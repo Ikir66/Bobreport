@@ -1,0 +1,46 @@
+<%- include('./partials/header.ejs') %>
+
+<h1><a href="/">BOBREPORT</a></h1>
+
+
+<p>Welcome back <%= username %>!</p>
+<p>Just fill in your daily and nightly activities...</p>
+
+<h2> Morning Report </h2>
+<form method="POST">
+    <label for="date">Date:</label>
+    <input type="date" name="date" value="<%= date %>"/>
+    <label for="sleepD">Sleep duration(hrs):</label>
+    <input type="number" name="sleepD" value="<%= sleepD %>" min="0" max="24" step=".01" />
+    <label for="sleepQ">Sleep quality(1-5):</label>
+    <input type="number" name="sleepQ" value="<%= sleepQ %>" min="1" max="5"/>
+    <label for="mood">Mood(1-5):</label>
+    <input type="number" name="mood" value="<%= mood %>" min="1" max="5" />
+    <input type="submit" value="Submit!" />
+</form>
+
+<% if (error) { %>
+      <ul>
+            <li><%= error %></li>
+      </ul>
+<% } %>
+
+<h2> Evening Report </h2>
+<form method="POST">
+  <label for="date">Date:</label>
+  <input type="date" name="date" value="<%= date %>"/>
+  <label for="sports">Time spent on sports(hrs):</label>
+  <input type="number" name="sports" value="<%= sports %>" min="0" max="24" step=".01" />
+  <label for="studies">Time studied(hrs):</label>
+  <input type="number" name="studies" value="<%= studies %>" min="0" max="24" step=".01" />
+  <label for="eating">Nutrition(1-5):</label>
+  <input type="number" name="eating" value="<%= eating %>" min="1" max="5"/>
+  <label for="mood">Mood(1-5):</label>
+  <input type="number" name="mood" value="<%= mood %>" min="1" max="5" />
+  <input type="submit" value="Submit!" />
+</form>
+
+<p><a href="/summaries">Go to your summaries</a></p>
+<p><a href="/out">Log out</a></>
+
+<%- include('./partials/footer.ejs') %>

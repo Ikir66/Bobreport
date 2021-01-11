@@ -1,0 +1,90 @@
+Deployed in   https://bobreport.herokuapp.com/
+
+
+Questions to telegram @nikstebob
+
+
+1. CONFIG
+  Configurations for database client are located in the "/config/config.js".
+
+
+2. RUNNING LOCALLY
+  Running is done in "app.js". Command for running the app can be found last in
+  that file.
+
+
+3. DESIGN NOTES
+  Username is used instead of email for registering users since I wanted to make
+  the app less formal. I also took some other freedoms in design, for example my UI
+  for reporting and summarization pages are a little different from asked but in my
+  opinion pretty well working and not "wrong" in that sense. The summarization
+  page lets the user choose wanted time period from calendar instead of choosing
+  specific week or month.
+  The database is divided into different tables for mornings, evenings, and moods :D
+  which maybe isn't optimal but still works.
+  Summary page shows data for last 7 days and 30 days NOT including current day.
+  Reports cannot be done for days that already have the specific report type done.
+  E.g. if a user tries to do two morning reports for the current day the second one
+  is discarded, and the first one cannot be removed, which is maybe a bit stupid
+  design.
+
+
+4. ABOUT THE CODE
+  The undisputed fact is that the code is messy. I did the whole project rapidly
+  and since I don't have that much of experience in bigger coding projects I prepared
+  for that from the beginning. If I didn't have five exams this month I maybe could
+  have made it more structured and cleaner but it is what it is.
+
+
+5. DEFICIENCIES
+  As I'm writing this I still haven't implemented the API for the app and it may be
+  the case that I won't do it at all even though it would be quite a quick process.
+  The other big loss are the tests. I'm very bad at writing them
+  and also running out of time. However there are a few of them for middleware.
+
+
+____________________________________________________________________________________
+
+
+6. CREATE TABLE STATEMENTS FOR DATABASE
+
+
+
+CREATE TABLE users1 (
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(320) NOT NULL,
+  password CHAR(60) NOT NULL
+);
+
+
+
+CREATE TABLE morning_reports (
+    id SERIAL PRIMARY KEY,
+    sleep_duration NUMERIC(4,2),
+    sleep_quality INTEGER,
+    user_id INTEGER REFERENCES users1(id),
+    date DATE
+);
+Example: INSERT INTO morning_reports (sleep_duration, sleep_quality, mood, user_id, date) VALUES (8.25, 3, 4, 1, NOW());
+
+
+
+CREATE TABLE evening_reports (
+    id SERIAL PRIMARY KEY,
+    time_sports NUMERIC(4,2),
+    time_studied NUMERIC(4,2),
+    eating INTEGER,
+    user_id INTEGER REFERENCES users1(id),
+    date DATE
+);
+Example: INSERT INTO evening_reports (time_sports, time_studied, eating, mood, user_id, date) VALUES (3.5, 5.75, 3, 5, 1, NOW());
+
+
+
+CREATE TABLE moods (
+    id SERIAL PRIMARY KEY,
+    mood INTEGER,
+    user_id INTEGER REFERENCES users1(id),
+    date DATE
+);
+Example: INSERT INTO moods (mood, user_id, date) VALUES (1, 2,  NOW());
