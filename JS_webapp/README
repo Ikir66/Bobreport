@@ -1,8 +1,6 @@
 Deployed in   https://bobreport.herokuapp.com/
 
 
-Questions to telegram @nikstebob
-
 
 1. CONFIG
   Configurations for database client are located in the "/config/config.js".
@@ -28,19 +26,6 @@ Questions to telegram @nikstebob
   is discarded, and the first one cannot be removed, which is maybe a bit stupid
   design.
 
-
-4. ABOUT THE CODE
-  The undisputed fact is that the code is messy. I did the whole project rapidly
-  and since I don't have that much of experience in bigger coding projects I prepared
-  for that from the beginning. If I didn't have five exams this month I maybe could
-  have made it more structured and cleaner but it is what it is.
-
-
-5. DEFICIENCIES
-  As I'm writing this I still haven't implemented the API for the app and it may be
-  the case that I won't do it at all even though it would be quite a quick process.
-  The other big loss are the tests. I'm very bad at writing them
-  and also running out of time. However there are a few of them for middleware.
 
 
 ____________________________________________________________________________________
