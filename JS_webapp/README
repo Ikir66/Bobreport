@@ -1,6 +1,8 @@
 Deployed in   https://bobreport.herokuapp.com/
 
-Bobreport is a web application for reporting and summarizing daily behaviour
+Bobreport is a web application for reporting and monitoring daily behaviour. 
+Users can register and do their morning and evening reports and see their statistics 
+in the summarization page. 
 
 
 1. CONFIG
