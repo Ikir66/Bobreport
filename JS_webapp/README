@@ -1,3 +1,8 @@
+School project for web software development course. App hosted by Heroku and db hosted 
+by ElephantSQL.
+
+______________________________________________________________________________________
+
 Deployed in   https://bobreport.herokuapp.com/
 
 Bobreport is a web application for reporting and monitoring daily behaviour. 
