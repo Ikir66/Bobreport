@@ -1,0 +1,61 @@
+{
+    "name":"Angomon #3232",
+    "symbol":"ANGO",
+    "description":"3,500 snazzy monsters dwelling in peace",
+    "seller_fee_basis_points":10000,
+    "attributes":[{
+    "trait_type":"Top",
+    "value": "Base Puff White"
+    },
+    {
+    "trait_type":"Shoes",
+    "value":"Sandals Yellow"
+    }, {
+    "trait_type":"Bottom",
+    "value":"Puff Pants Red"
+    },
+    {
+    "trait_type":"Head",
+    "value":"None"
+    },
+    {
+    "trait_type":"Base",
+    "value":"Orange"
+    },
+    {
+    "trait_type":"Teeth",
+    "value":"Spike"
+    },
+    {
+    "trait_type":"Ears",
+    "value":"Heart"
+    },
+   {
+    "trait_type":"Eyes",
+    "value":"Spiral"
+    },
+   {
+    "trait_type":"Background",
+    "value":"Yellow"
+    }
+    ],
+    "collection":{
+    "name":"Genesis",
+    "family":"Angomon"
+    },
+    "properties":{
+    "files":[{
+    "uri":"https://www.arweave.net/RslRgrOSAlDB2AuAvHVThETR2dQJ6pmZ2_8_BZTqXQs?ext=png",
+    "type":"image/png"
+    }
+    ],
+    "category":"image",
+    "creators":[{
+    "address":"CVkw2BVYRx2RBCMypxhjnFb3gj8EoCYySsgYuqo9YSyP",
+    "share":100
+    }
+    ]
+    }
+}
+
+    
