@@ -2,7 +2,7 @@
     "name":"Angomon #3232",
     "symbol":"ANGO",
     "description":"3,500 snazzy monsters dwelling in peace",
-    "seller_fee_basis_points":10000,
+    "seller_fee_basis_points":9800,
     "image": "https://www.arweave.net/RslRgrOSAlDB2AuAvHVThETR2dQJ6pmZ2_8_BZTqXQs?ext=png",
     "attributes":[{
     "trait_type":"Top",
